@@ -12,3 +12,10 @@ export async function getTrends(page = 1) {
   const response = await axios.get(`${BASE_URL}${TRENDING}?${searchParams}`);
   return response.data.results;
 }
+export async function getOneMovie(id) {
+  const searchParams = new URLSearchParams({
+    api_key: KEY,
+  });
+  const response = await axios.get(`${BASE_URL}/movie/${id}?${searchParams}`);
+  return response.data;
+}
