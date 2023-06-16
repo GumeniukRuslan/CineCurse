@@ -3,9 +3,11 @@ import { SharedLayout } from "./SharedLayout/SharedLayout";
 import { Home } from "pages/Home";
 import { Movies } from "pages/Movies";
 import { MovieDetails } from "pages/MovieDetails";
+import { Toaster } from "react-hot-toast";
 
 export const App = () => {
   return (
+    <>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />}/>
@@ -16,5 +18,8 @@ export const App = () => {
           </Route>
         </Route>
       </Routes>
+      <Toaster position="top-right" toastOptions={{duration: 1500, style: {border: '1px solid #713200'}}} />
+    </>
+      
   );
 };

@@ -9,7 +9,6 @@ export const Home = () => {
     (async () => {  
       const films = await getTrends();
       setFilms(films);
-      console.log(films)
     })();
   }, [])
 
