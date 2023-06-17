@@ -2,34 +2,37 @@ import { MovieList } from "components/MovieList/MovieList";
 import { getMovies } from "helpers/api";
 import { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
+import { useSearchParams } from "react-router-dom";
 
 export const Movies = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [movies, setMovies] = useState(null)
+ 
+  const [movies, setMovies] = useState(null);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const filterValue = searchParams.get('filter') ?? '';
 
   useEffect(() => {
-    if(searchQuery) {
+    if(filterValue) {
       (async () => {  
-        const data = await getMovies(searchQuery);
+        const data = await getMovies(filterValue);
         setMovies(data.results);
-        console.log(data.results)
       })();
     }
-    
-  }, [searchQuery])
+  }, [filterValue])
 
   function onSubmit(evt) {
     evt.preventDefault()
-    if (!evt.target.elements.search.value.trim()) {
+    const query = evt.target.elements.search.value.trim();
+    if (!query) {
       const notify = () => toast.error('Please, fill the search field.');
       return notify()
-    } else if (evt.target.elements.search.value.trim() === searchQuery) {
+    }else if (query === filterValue) {
       const notify = () => toast('Please use another Query ;)', {icon: '😵‍💫'});;
       return notify()
     }
-    setSearchQuery(evt.target.elements.search.value.trim());
+    const newFilter = query ? { filter: query } : {};
+    setSearchParams(newFilter);
   }
-
+  
   return (
     <div>
       <form onSubmit={onSubmit}>
@@ -42,6 +45,7 @@ export const Movies = () => {
           autoComplete="off"
           autoFocus
           placeholder="Search films"
+          defaultValue={filterValue}
         />
       </form>
       {movies && <MovieList data={movies}/>}
