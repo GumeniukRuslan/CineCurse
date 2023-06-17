@@ -3,33 +3,56 @@ import { getMovies } from "helpers/api";
 import { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { useSearchParams } from "react-router-dom";
+import { STATUS } from "constants/constants";
+import { Loader } from "components/Loader/Loader";
+import { Error } from "components/Error/Error";
+import { Message } from "components/Message/Message";
+import { Button } from "components/ButtonLoadMore/ButtonLoadMore";
 
 export const Movies = () => {
  
-  const [movies, setMovies] = useState(null);
+  const [status, setStatus] = useState(STATUS.IDLE);
+  const [movies, setMovies] = useState([]);
+  const [page, setPage] = useState(1);
+  const [totalMovies, setTotalMovies] = useState(0);
   const [searchParams, setSearchParams] = useSearchParams();
   const filterValue = searchParams.get('filter') ?? '';
 
   useEffect(() => {
-    if(filterValue) {
-      (async () => {  
-        const data = await getMovies(filterValue);
-        setMovies(data.results);
+    if (filterValue) {
+      (async () => {
+        try {
+          if (page === 1) {
+            setStatus(STATUS.PENDING)
+            const data = await getMovies(filterValue);
+            setMovies(data.results);
+            setTotalMovies(data.total_results);
+            setStatus(STATUS.RESOLVED);
+          }
+          if (page > 1) {
+              const data = await getMovies(filterValue, page);
+              setMovies(prevArr => [...prevArr, ...data.results]);
+            }
+        } catch {
+          setStatus(STATUS.REJECTED)
+        }
       })();
-    }
-  }, [filterValue])
+    } 
+  }, [filterValue, page])
 
   function onSubmit(evt) {
     evt.preventDefault()
     const query = evt.target.elements.search.value.trim();
     if (!query) {
+      setSearchParams({});
       const notify = () => toast.error('Please, fill the search field.');
       return notify()
     }else if (query === filterValue) {
       const notify = () => toast('Please use another Query ;)', {icon: '😵‍💫'});;
       return notify()
     }
-    const newFilter = query ? { filter: query } : {};
+    setPage(1)
+    const newFilter = { filter: query };
     setSearchParams(newFilter);
   }
   
@@ -37,9 +60,9 @@ export const Movies = () => {
     <div>
       <form onSubmit={onSubmit}>
         <button type="submit" >
-          <span>Search</span>
+          Search
         </button>
-          <input
+        <input
           name="search"
           type="text"
           autoComplete="off"
@@ -48,7 +71,11 @@ export const Movies = () => {
           defaultValue={filterValue}
         />
       </form>
-      {movies && <MovieList data={movies}/>}
+      {status === STATUS.PENDING && <Loader />}
+      {status === STATUS.RESOLVED
+        ? (movies.length ? (<><MovieList data={movies} /> {totalMovies > movies.length ? <Button loadMore={() => setPage(prevPage => prevPage + 1)}/>: <></>}</>) : <Message text="The true explorers of our time are not discouraged by failure. Try another query." />)
+        : <></>}
+      {status === STATUS.REJECTED && <Error/>}
     </div>
   )
 }

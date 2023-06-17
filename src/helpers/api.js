@@ -11,8 +11,19 @@ export async function getTrends(page = 1) {
     page: page,
   });
   const response = await axios.get(`${BASE_URL}${TRENDING}?${searchParams}`);
-  return response.data.results;
+  return response.data;
 }
+
+export async function getMovies(query, page = 1) {
+  const searchParams = new URLSearchParams({
+    api_key: KEY,
+    query: query,
+    page: page,
+  });
+  const response = await axios.get(`${BASE_URL}${SEARCH}?${searchParams}`);
+  return response.data;
+}
+
 export async function getOneMovie(id) {
   const searchParams = new URLSearchParams({
     api_key: KEY,
@@ -21,18 +32,7 @@ export async function getOneMovie(id) {
   return response.data;
 }
 
-export const getMovies = async (query, page = 1) => {
-  const searchParams = new URLSearchParams({
-    api_key: KEY,
-    query: query,
-    page: page,
-  });
-  const response = await axios.get(`${BASE_URL}${SEARCH}?${searchParams}`);
-  console.log(response);
-  return response.data;
-};
-
-export const getCast = async id => {
+export async function getCast(id) {
   const searchParams = new URLSearchParams({
     api_key: KEY,
   });
@@ -40,9 +40,9 @@ export const getCast = async id => {
     `${BASE_URL}/movie/${id}/credits?${searchParams}`
   );
   return response.data;
-};
+}
 
-export const getReviews = async id => {
+export async function getReviews(id) {
   const searchParams = new URLSearchParams({
     api_key: KEY,
   });
@@ -50,4 +50,4 @@ export const getReviews = async id => {
     `${BASE_URL}/movie/${id}/reviews?${searchParams}`
   );
   return response.data;
-};
+}

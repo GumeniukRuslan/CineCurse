@@ -6,6 +6,5 @@ export const ReviewItem = ({review}) => {
       <h2>{review.author}</h2>
       <p>{review.content}</p>
     </li>
-    
   )
 }
