@@ -6,6 +6,7 @@ import { STATUS } from "constants/constants";
 import { Error } from "components/Error/Error";
 import { Loader } from "components/Loader/Loader";
 import { Message } from "components/Message/Message";
+import { CastList } from "./cast.styled";
 
 
 export const Cast = () => {
@@ -30,7 +31,7 @@ export const Cast = () => {
     <>
       {status === STATUS.PENDING && <Loader />}
       {status === STATUS.RESOLVED
-        ? (cast.length ? <ul>{cast && cast.map(member => <CastMember key={member.id} member={member} />)}</ul> : <Message text="Ninja clan" />)
+        ? (cast.length ? <CastList>{cast && cast.map(member => <CastMember key={member.id} member={member} />)}</CastList> : <Message text="Ninja clan" />)
         : <></>}
       {status === STATUS.REJECTED && <Error/>}
     </>

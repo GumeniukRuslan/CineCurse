@@ -7,7 +7,7 @@ export const StyledForm = styled.form`
   justify-content: center;
 `;
 export const SybmitButton = styled.button`
-  background-color: #430f58;
+  background-color: #6643b5;
   color: rgba(255, 255, 255, 0.908);
   border: none;
   border-radius: 4px;

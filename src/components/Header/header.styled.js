@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
   width: 100%;
-  background-color: #9973e2;
+  background-color: #6643b5;
   padding: 20px 0px;
   display: flex;
   justify-content: flex-start;

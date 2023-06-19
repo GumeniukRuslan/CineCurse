@@ -6,6 +6,7 @@ import { STATUS } from "constants/constants";
 import { Error } from "components/Error/Error";
 import { Loader } from "components/Loader/Loader";
 import { Message } from "components/Message/Message";
+import { ReviewsListStyled } from "./review.styled";
 
 
 export const Reviews = () => {
@@ -30,7 +31,7 @@ export const Reviews = () => {
     <>
       {status === STATUS.PENDING && <Loader />}
       {status === STATUS.RESOLVED
-        ? (reviews.length ? <ul>{reviews && reviews.map(review => <ReviewItem key={review.id} review={review} />)}</ul> : <Message text="There are no reviews" />)
+        ? (reviews.length ? <ReviewsListStyled>{reviews && reviews.map(review => <ReviewItem key={review.id} review={review} />)}</ReviewsListStyled> : <Message text="There are no reviews" />)
         : <></>}
       {status === STATUS.REJECTED && <Error/>}
     </>

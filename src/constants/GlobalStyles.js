@@ -3,7 +3,13 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyles = createGlobalStyle`
 
   body{
-    background: #f7f3ff;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url('https://img.freepik.com/premium-photo/cinema-movie-theatre-with-purple-seats-rows-black-copy-space-surface_118047-6621.jpg?w=1060');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
   }
 
 

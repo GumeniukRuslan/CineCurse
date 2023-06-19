@@ -1,19 +1,26 @@
 import { Link } from "react-router-dom"
-import { BackLinkBtn } from "./movie.styled"
+import { AditionalInfo, AditionalInfoLink, BackLinkBtn, Description, FlexContainer, MoviePoster, StyledTitle, Test } from "./movie.styled"
+import { Chip } from "components/MovieItem/movieItem.styled"
 
 
 export const Movie = ({movie, backLink}) => {
   return (
     <>
       <BackLinkBtn to={backLink.current}>Back</BackLinkBtn>
-      <h1>{movie.title}</h1>
-      <img style={{ width: '200px' }} src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title} />
-      <p>{movie.overview}</p>
-      <p>{movie.vote_average.toFixed(1)}</p>
-      <ul>
-        <li><Link to='cast'>Cast</Link></li>
-        <li><Link to='reviews'>Reviews</Link></li>
-      </ul>
+      <FlexContainer>
+        <MoviePoster src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title} />
+        <Test>
+          <StyledTitle>{movie.title}</StyledTitle>
+          <Description>{movie.overview}</Description>
+          <Chip type={movie.vote_count ? movie.vote_average : -1}>{movie.vote_count ? movie.vote_average.toFixed(1) : ''}</Chip>
+          <AditionalInfo>
+            <AditionalInfoLink><Link style={{color: 'white', fontSize: '20px'}} to='cast'>Cast</Link></AditionalInfoLink>
+            <AditionalInfoLink><Link style={{color: 'white', fontSize: '20px'}} to='reviews'>Reviews</Link></AditionalInfoLink>
+          </AditionalInfo>
+        </Test>
+      </FlexContainer>
+      
+      
     </>
   )
 }

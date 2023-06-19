@@ -5,7 +5,7 @@ export const LoadMore = styled.button`
   margin-left: auto;
   margin-right: auto;
   margin-top: 25px;
-  background-color: #430f58;
+  background-color: #6643b5;
   border: none;
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.908);

@@ -1,7 +1,13 @@
+import { Circles } from "react-loader-spinner"
+import { LoaderPosition } from "./loader.styled"
+
 export const Loader = () => {
   return (
-    <div>
-      Loading...
-    </div>
+    <LoaderPosition>
+      <Circles
+         width='200'
+        color="#6643b5"
+      />
+    </LoaderPosition>
   )
 }
