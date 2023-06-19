@@ -9,7 +9,7 @@ import { Message } from "components/Message/Message";
 import { ReviewsListStyled } from "./review.styled";
 
 
-export const Reviews = () => {
+const Reviews = () => {
   const [status, setStatus] = useState(STATUS.IDLE);
   const { movieId } = useParams();
   const [reviews, setReview] = useState(null);
@@ -36,8 +36,6 @@ export const Reviews = () => {
       {status === STATUS.REJECTED && <Error/>}
     </>
   )
-  
-  
-  
-  
 }
+
+export default Reviews

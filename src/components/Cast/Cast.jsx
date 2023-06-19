@@ -9,7 +9,7 @@ import { Message } from "components/Message/Message";
 import { CastList } from "./cast.styled";
 
 
-export const Cast = () => {
+const Cast = () => {
   const [status, setStatus] = useState(STATUS.IDLE);
   const { movieId } = useParams();
   const [cast, setCast] = useState(null);
@@ -36,8 +36,6 @@ export const Cast = () => {
       {status === STATUS.REJECTED && <Error/>}
     </>
   )
-  
-  
-  
-  
 }
+
+export default Cast

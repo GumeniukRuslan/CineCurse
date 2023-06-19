@@ -1,6 +1,6 @@
 import { Loader } from "components/Loader/Loader";
 import { getOneMovie } from "helpers/api";
-import { useEffect, useRef, useState } from "react"
+import { Suspense, useEffect, useRef, useState } from "react"
 import { Outlet, useLocation, useParams } from "react-router-dom";
 import { STATUS } from "constants/constants";
 import { Error } from "components/Error/Error";
@@ -34,7 +34,9 @@ const MovieDetails = () => {
       {status === STATUS.PENDING && <Loader />}
       {status === STATUS.RESOLVED && <Movie movie={movie} backLink={backLinkLocation} />}
       {status === STATUS.REJECTED && <Error />}
-      <Outlet/>
+      <Suspense fallback={<Loader/>}>
+        <Outlet/>
+      </Suspense>
     </>
   )
 }
