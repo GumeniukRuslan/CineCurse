@@ -8,6 +8,7 @@ import { Loader } from "components/Loader/Loader";
 import { Error } from "components/Error/Error";
 import { Message } from "components/Message/Message";
 import { Button } from "components/ButtonLoadMore/ButtonLoadMore";
+import { Form } from "components/Form/Form";
 
 export const Movies = () => {
  
@@ -57,25 +58,13 @@ export const Movies = () => {
   }
   
   return (
-    <div>
-      <form onSubmit={onSubmit}>
-        <button type="submit" >
-          Search
-        </button>
-        <input
-          name="search"
-          type="text"
-          autoComplete="off"
-          autoFocus
-          placeholder="Search films"
-          defaultValue={filterValue}
-        />
-      </form>
+    <>
+      <Form submit={onSubmit} value={filterValue} />
       {status === STATUS.PENDING && <Loader />}
       {status === STATUS.RESOLVED
         ? (movies.length ? (<><MovieList data={movies} /> {totalMovies > movies.length ? <Button loadMore={() => setPage(prevPage => prevPage + 1)}/>: <></>}</>) : <Message text="The true explorers of our time are not discouraged by failure. Try another query." />)
         : <></>}
       {status === STATUS.REJECTED && <Error/>}
-    </div>
+    </>
   )
 }

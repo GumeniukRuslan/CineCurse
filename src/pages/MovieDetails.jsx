@@ -1,7 +1,7 @@
 import { Loader } from "components/Loader/Loader";
 import { getOneMovie } from "helpers/api";
 import { useEffect, useRef, useState } from "react"
-import { Link, Outlet, useLocation, useParams } from "react-router-dom";
+import { Outlet, useLocation, useParams } from "react-router-dom";
 import { STATUS } from "constants/constants";
 import { Error } from "components/Error/Error";
 import { Movie } from "components/Movie/Movie";
@@ -30,9 +30,9 @@ export const MovieDetails = () => {
   
   return (
     <>
-      <Link to={backLinkLocation.current}>back</Link>
+      
       {status === STATUS.PENDING && <Loader />}
-      {status === STATUS.RESOLVED && <Movie movie={movie} />}
+      {status === STATUS.RESOLVED && <Movie movie={movie} backLink={backLinkLocation} />}
       {status === STATUS.REJECTED && <Error />}
       <Outlet/>
     </>

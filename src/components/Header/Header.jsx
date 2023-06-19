@@ -1,20 +1,27 @@
-const { NavLink } = require("react-router-dom")
+import { Container, NavList, StyledHeader, StyledLink, StyledSVG } from "./header.styled"
+
 
 export const Header = () => {
   return (
-    <header>
-      <ul>
-        <li>
-          <NavLink to='/'>
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to='/movies'>
-            Movies
-          </NavLink>
-        </li>
-      </ul>
-    </header>
+    <StyledHeader>
+      <Container>
+        <StyledLink to='/'>
+          <StyledSVG size={60}/>
+        </StyledLink>
+        <NavList>
+          <li>
+            <StyledLink to='/'>
+              Home
+            </StyledLink>
+          </li>
+          <li>
+            <StyledLink to='/movies'>
+              Movies
+            </StyledLink>
+          </li>
+        </NavList>
+      </Container>
+      
+    </StyledHeader>
   )
 }
