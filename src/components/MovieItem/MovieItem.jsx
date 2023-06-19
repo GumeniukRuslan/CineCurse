@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { Chip, ImageStyled, MovieItemStyled, MovieTitle } from "./movieItem.styled"
+import PropTypes from 'prop-types';
 
 export const MovieItem = ({info, path}) => {
   return (
@@ -13,3 +14,8 @@ export const MovieItem = ({info, path}) => {
     
   )
 }
+
+MovieItem.propTypes = {
+  info: PropTypes.object.isRequired,
+  path: PropTypes.object
+} 

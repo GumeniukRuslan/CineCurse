@@ -1,4 +1,5 @@
 import { StyledForm, StyledInput, SybmitButton } from "./form.styled"
+import PropTypes from 'prop-types';
 
 export const Form = ({submit, value}) => {
   return <StyledForm onSubmit={submit}>
@@ -15,3 +16,8 @@ export const Form = ({submit, value}) => {
     </SybmitButton>
   </StyledForm>
 }
+
+Form.propTypes = {
+  submit: PropTypes.func.isRequired,
+  value: PropTypes.string
+} 

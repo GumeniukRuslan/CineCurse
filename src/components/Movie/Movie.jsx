@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { AditionalInfo, AditionalInfoLink, BackLinkBtn, Description, FlexContainer, MoviePoster, StyledTitle, Test } from "./movie.styled"
 import { Chip } from "components/MovieItem/movieItem.styled"
+import PropTypes from 'prop-types';
 
 
 export const Movie = ({movie, backLink}) => {
@@ -19,8 +20,11 @@ export const Movie = ({movie, backLink}) => {
           </AditionalInfo>
         </Test>
       </FlexContainer>
-      
-      
     </>
   )
 }
+
+Movie.propTypes = {
+  movie: PropTypes.object.isRequired,
+  backLink: PropTypes.object
+} 

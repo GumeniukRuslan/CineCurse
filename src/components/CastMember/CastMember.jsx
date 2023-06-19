@@ -1,4 +1,5 @@
 import { ActorName, ActorPhoto, ActorPosition, CastMemberStyled } from "./castMember.styled"
+import PropTypes from 'prop-types';
 
 export const CastMember = ({member}) => {
   return (
@@ -10,3 +11,7 @@ export const CastMember = ({member}) => {
     
   )
 }
+
+CastMember.propTypes = {
+  member: PropTypes.object.isRequired
+} 

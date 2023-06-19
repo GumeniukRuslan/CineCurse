@@ -1,6 +1,7 @@
 import { MovieItem } from "components/MovieItem/MovieItem"
 import { useLocation } from "react-router-dom"
 import { MovieListStyled } from "./movieList.styled"
+import PropTypes from 'prop-types';
 
 export const MovieList = ({ data }) => {
   const location = useLocation()
@@ -14,3 +15,7 @@ export const MovieList = ({ data }) => {
   )
   
 }
+
+MovieList.propTypes = {
+  data: PropTypes.array.isRequired,
+} 
