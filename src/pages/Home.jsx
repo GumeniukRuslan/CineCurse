@@ -6,7 +6,7 @@ import { STATUS } from "constants/constants";
 import { getTrends } from "helpers/api"
 import { useEffect, useState } from "react"
 
-export const Home = () => {
+const Home = () => {
   const [status, setStatus] = useState(STATUS.IDLE);
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
@@ -42,3 +42,5 @@ export const Home = () => {
     </>
   )
 }
+
+export default Home

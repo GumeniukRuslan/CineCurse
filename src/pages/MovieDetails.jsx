@@ -6,7 +6,7 @@ import { STATUS } from "constants/constants";
 import { Error } from "components/Error/Error";
 import { Movie } from "components/Movie/Movie";
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
 
   const [status, setStatus] = useState(STATUS.IDLE);
   const { movieId } = useParams();
@@ -38,3 +38,5 @@ export const MovieDetails = () => {
     </>
   )
 }
+
+export default MovieDetails

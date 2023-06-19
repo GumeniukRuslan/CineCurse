@@ -10,7 +10,7 @@ import { Message } from "components/Message/Message";
 import { Button } from "components/ButtonLoadMore/ButtonLoadMore";
 import { Form } from "components/Form/Form";
 
-export const Movies = () => {
+const Movies = () => {
  
   const [status, setStatus] = useState(STATUS.IDLE);
   const [movies, setMovies] = useState([]);
@@ -68,3 +68,5 @@ export const Movies = () => {
     </>
   )
 }
+
+export default Movies
