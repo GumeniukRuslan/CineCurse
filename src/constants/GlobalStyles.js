@@ -31,4 +31,10 @@ export const GlobalStyles = createGlobalStyle`
   h2, h3, p {
     margin: 0;
   }
+
+  h1{
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
 `;

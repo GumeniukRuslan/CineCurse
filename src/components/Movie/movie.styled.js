@@ -23,7 +23,7 @@ export const FlexContainer = styled.div`
   box-sizing: border-box;
   position: relative;
   gap: 30px;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   margin-bottom: 30px;
   padding: 15px;
