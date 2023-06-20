@@ -19,6 +19,7 @@ export const AuthorInfo = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-right: 20px;
   gap: 10px;
 `;
 
@@ -41,6 +42,7 @@ export const AuthorAvatar = styled.img`
 export const AuthorName = styled.h2`
   font-size: 18px;
   text-align: center;
+  width: 100px;
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;

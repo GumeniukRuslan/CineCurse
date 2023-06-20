@@ -13,7 +13,8 @@ export const Movie = ({movie, backLink}) => {
         <Test>
           <StyledTitle>{movie.title}</StyledTitle>
           <Description>{movie.overview}</Description>
-          <Chip type={movie.vote_count ? movie.vote_average : -1}>{movie.vote_count ? movie.vote_average.toFixed(1) : ''}</Chip>
+          {movie.vote_count ? <Chip>{movie.vote_count ? movie.vote_average.toFixed(1) : ''}</Chip> : <></>}
+          
           <AditionalInfo>
             <AditionalInfoLink><Link style={{color: 'white', fontSize: '20px'}} to='cast'>Cast</Link></AditionalInfoLink>
             <AditionalInfoLink><Link style={{color: 'white', fontSize: '20px'}} to='reviews'>Reviews</Link></AditionalInfoLink>
