@@ -11,8 +11,8 @@ export const SybmitButton = styled.button`
   color: rgba(255, 255, 255, 0.908);
   border: none;
   border-radius: 4px;
-  font-size: 16px;
-  padding: 10px 15px;
+  font-size: 17px;
+  padding: 10px 13px;
   margin-left: 10px;
   cursor: pointer;
   transition: background-color 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
@@ -27,7 +27,7 @@ export const StyledInput = styled.input`
   padding: 10px;
   border: 2px solid #ccc;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 14px;
   transition: border-color 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
 
   &:focus {

@@ -6,11 +6,22 @@ export const MovieItemStyled = styled.li`
   background-color: rgba(220, 214, 247, 0.3);
   backdrop-filter: blur(10px);
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
-  width: calc((100% - 5 * 20px) / 5);
+  width: 90%;
   position: relative;
   transition: all 0.2s ease-in-out;
   &:hover {
     transform: scale(1.05);
+  }
+
+  @media screen and (min-width: 380px) {
+    width: calc((100% - 2 * 20px) / 2);
+  }
+
+  @media screen and (min-width: 460px) {
+    width: calc((100% - 3 * 20px) / 3);
+  }
+  @media screen and (min-width: 910px) {
+    width: calc((100% - 5 * 20px) / 5);
   }
 `;
 
@@ -26,14 +37,24 @@ export const MovieTitle = styled.h2`
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+
+  @media screen and (min-width: 380px) {
+    font-size: 12px;
+  }
+  @media screen and (min-width: 460px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 910px) {
+    font-size: 16px;
+  }
 `;
 
 export const Chip = styled.p`
   background-color: ${bcgColor};
   backdrop-filter: blur(10px);
   display: inline-block;
-  padding: 8px;
-  font-size: 17px;
+  padding: 6px;
+  font-size: 15px;
   border-radius: 40%;
   position: absolute;
   top: 15px;

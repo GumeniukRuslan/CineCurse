@@ -9,7 +9,7 @@ export const MovieList = ({ data }) => {
   return (
     <>
       <MovieListStyled>
-        {data.map(movie => <MovieItem path={{from: location}} key={movie.id} info={movie} />)}
+        {data.map(movie => <MovieItem path={{from: location}} key={movie.id} movie={movie} />)}
       </MovieListStyled>
     </>
   )

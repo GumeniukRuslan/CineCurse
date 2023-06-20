@@ -18,14 +18,23 @@ export const Container = styled.div`
   gap: 15px;
   margin: 0 auto;
   max-width: 1250px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  @media screen and (min-width: 380px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 `;
 
 export const StyledSVG = styled(GiFilmSpool)`
-  margin-right: 10px;
   fill: currentColor;
   fill: black;
+  width: 40px;
+  height: 40px;
+  @media screen and (min-width: 380px) {
+    width: 60px;
+    height: 60px;
+  }
 `;
 
 export const NavList = styled.ul`
@@ -35,6 +44,7 @@ export const NavList = styled.ul`
 
 export const StyledLink = styled(NavLink)`
   transition: color 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+  font-size: 15px;
   &.active {
     color: white;
   }
@@ -42,5 +52,9 @@ export const StyledLink = styled(NavLink)`
   &:hover,
   &:focus {
     color: #dcb5ff;
+  }
+
+  @media screen and (min-width: 380px) {
+    font-size: 25px;
   }
 `;

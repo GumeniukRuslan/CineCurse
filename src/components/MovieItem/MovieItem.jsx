@@ -2,13 +2,13 @@ import { Link } from "react-router-dom"
 import { Chip, ImageStyled, MovieItemStyled, MovieTitle } from "./movieItem.styled"
 import PropTypes from 'prop-types';
 
-export const MovieItem = ({info, path}) => {
+export const MovieItem = ({movie, path}) => {
   return (
     <MovieItemStyled>
-      <Link to={`/movies/${info.id}`} state={path}>
-        <ImageStyled src={`https://image.tmdb.org/t/p/original${info.poster_path}`} alt={info.title} />
-        <MovieTitle>{info.title}</MovieTitle>
-        <Chip type={info.vote_count ? info.vote_average : -1}>{info.vote_count ? info.vote_average.toFixed(1) : ''}</Chip>
+      <Link to={`/movies/${movie.id}`} state={path}>
+        <ImageStyled src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title} />
+        <MovieTitle>{movie.title}</MovieTitle>
+        {movie.vote_count ? <Chip type={ movie.vote_average}>{movie.vote_average.toFixed(1)}</Chip> : <></>}
       </Link>
     </MovieItemStyled>
     
@@ -16,6 +16,6 @@ export const MovieItem = ({info, path}) => {
 }
 
 MovieItem.propTypes = {
-  info: PropTypes.object.isRequired,
+  movie: PropTypes.object.isRequired,
   path: PropTypes.object
 } 

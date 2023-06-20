@@ -2,10 +2,11 @@ import styled from 'styled-components';
 
 export const ReviewItemStyled = styled.li`
   display: flex;
-  overflow: hidden;
-  justify-content: flex-start;
-  box-sizing: border-box;
+  flex-direction: column;
   gap: 15px;
+  align-items: flex-start;
+  overflow: hidden;
+  box-sizing: border-box;
   padding: 15px;
   border-radius: 10px;
   background-color: rgba(220, 214, 247, 0.3);
@@ -13,6 +14,10 @@ export const ReviewItemStyled = styled.li`
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.3),
     0 0 20px rgba(0, 0, 0, 0.1);
   width: 100%;
+  @media screen and (min-width: 600px) {
+    justify-content: flex-start;
+    flex-direction: row;
+  }
 `;
 
 export const AuthorInfo = styled.div`

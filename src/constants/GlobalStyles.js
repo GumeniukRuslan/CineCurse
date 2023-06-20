@@ -10,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-  }
+  };
 
 
 
@@ -18,7 +18,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     list-style: none;
-  }
+  };
 
   a {
     color: black;
@@ -26,15 +26,28 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 25px;
     height: 100%;
     display: inline-block;
-  }
+  };
 
   h2, h3, p {
     margin: 0;
-  }
+  };
 
   h1{
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
       1px 1px 0 #000;
-  }
+      font-size: 22px;
+      @media screen and (min-width: 380px) {
+        font-size: 30px;
+      }
+  };
+
+  body::-webkit-scrollbar{
+    width: 10px;
+  };
+
+  body::-webkit-scrollbar-thumb{
+    background-color: #502ee851;
+    border-radius: 12px;;
+  };
 `;

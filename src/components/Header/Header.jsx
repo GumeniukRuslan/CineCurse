@@ -6,7 +6,7 @@ export const Header = () => {
     <StyledHeader>
       <Container>
         <StyledLink to='/'>
-          <StyledSVG size={60}/>
+          <StyledSVG />
         </StyledLink>
         <NavList>
           <li>

@@ -19,12 +19,11 @@ export const BackLinkBtn = styled(Link)`
 `;
 
 export const FlexContainer = styled.div`
-  display: flex;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
-  gap: 30px;
-  justify-content: flex-start;
-  align-items: flex-start;
   margin-bottom: 30px;
   padding: 15px;
   width: 100%;
@@ -33,38 +32,61 @@ export const FlexContainer = styled.div`
   backdrop-filter: blur(10px);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.3),
     0 0 20px rgba(0, 0, 0, 0.1);
+
+  @media screen and (min-width: 600px) {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 `;
 
 export const MoviePoster = styled.img`
-  max-width: 260px;
+  max-width: 70%;
+  margin-bottom: 15px;
+  @media screen and (min-width: 600px) {
+    max-width: 260px;
+    margin-bottom: 0;
+  }
 `;
 
 export const StyledTitle = styled.h1`
   margin: 0;
+  font-size: 25px;
   width: 90%;
   margin-bottom: 20px;
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+
+  @media screen and (min-width: 600px) {
+    font-size: 28px;
+  }
 `;
 
 export const Description = styled.p`
   color: white;
   padding-bottom: 15px;
-  font-size: 17px;
+
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+  @media screen and (min-width: 600px) {
+    font-size: 18px;
+  }
 `;
 
-export const Test = styled.div``;
-
 export const AditionalInfo = styled.ul`
-  position: absolute;
-  bottom: 15px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
+  font-size: 10px;
+
+  @media screen and (min-width: 600px) {
+    position: absolute;
+    bottom: 15px;
+  }
 `;
 
 export const AditionalInfoLink = styled.li`
