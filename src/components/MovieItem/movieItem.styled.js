@@ -28,6 +28,7 @@ export const MovieItemStyled = styled.li`
 export const ImageStyled = styled.img`
   width: 100%;
   display: block;
+  /* height: 224px; */
 `;
 
 export const MovieTitle = styled.h2`

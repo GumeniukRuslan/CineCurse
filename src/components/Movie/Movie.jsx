@@ -9,7 +9,7 @@ export const Movie = ({movie, backLink}) => {
     <>
       <BackLinkBtn to={backLink.current}>Back</BackLinkBtn>
       <FlexContainer>
-        <MoviePoster src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title} />
+        <MoviePoster src={movie.poster_path ? `https://image.tmdb.org/t/p/original${movie.poster_path}` : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"} alt={movie.title} />
         <div>
           <StyledTitle>{movie.title}</StyledTitle>
           <Description>{movie.overview}</Description>

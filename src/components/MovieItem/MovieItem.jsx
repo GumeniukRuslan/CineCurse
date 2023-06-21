@@ -6,7 +6,7 @@ export const MovieItem = ({movie, path}) => {
   return (
     <MovieItemStyled>
       <Link to={`/movies/${movie.id}`} state={path}>
-        <ImageStyled src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title} />
+        <ImageStyled src={movie.poster_path ? `https://image.tmdb.org/t/p/original${movie.poster_path}` : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"} alt={movie.title} />
         <MovieTitle>{movie.title}</MovieTitle>
         {movie.vote_count ? <Chip type={ movie.vote_average}>{movie.vote_average.toFixed(1)}</Chip> : <></>}
       </Link>
