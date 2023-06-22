@@ -114,7 +114,16 @@ export const StyledNavLink = styled(NavLink)`
 
 export const ReleaseDate = styled.div`
   color: white;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+  @media screen and (min-width: 600px) {
+    margin-bottom: 0px;
+  }
+`;
+
+export const PosterWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;

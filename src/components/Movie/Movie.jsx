@@ -1,5 +1,5 @@
 
-import { AditionalInfo, AditionalInfoLink, BackLinkBtn, Description, FlexContainer, MoviePoster, ReleaseDate, StyledNavLink, StyledTitle } from "./movie.styled"
+import { AditionalInfo, AditionalInfoLink, BackLinkBtn, Description, FlexContainer, MoviePoster, PosterWrapper, ReleaseDate, StyledNavLink, StyledTitle } from "./movie.styled"
 import { Chip, ComingSoon } from "components/MovieItem/movieItem.styled"
 import PropTypes from 'prop-types';
 import { DEFAULT_VALUES } from "constants/constants";
@@ -16,10 +16,10 @@ export const Movie = ({ movie, backLink }) => {
     <>
       <BackLinkBtn to={backLink.current}>Back</BackLinkBtn>
       <FlexContainer>
-        <div>
+        <PosterWrapper>
           <MoviePoster src={movie.poster_path ? `${DEFAULT_VALUES.IMG_PATH}${movie.poster_path}` : DEFAULT_VALUES.POSTER} alt={movie.title} />
           {movie.release_date ? <ReleaseDate>Release date: <StyledDate>{formatedDate}</StyledDate></ReleaseDate> : <></>}
-        </div>
+        </PosterWrapper>
         
         <div>
           <StyledTitle>{movie.title}</StyledTitle>
