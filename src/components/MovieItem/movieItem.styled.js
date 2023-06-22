@@ -71,6 +71,7 @@ export const Chip = styled.p`
   position: absolute;
   top: 15px;
   right: 15px;
+  color: black;
 `;
 
 function bcgColor(props) {

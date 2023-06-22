@@ -1,3 +1,4 @@
+import { Chip } from 'components/MovieItem/movieItem.styled';
 import styled from 'styled-components';
 
 export const ReviewItemStyled = styled.li`
@@ -23,15 +24,18 @@ export const ReviewItemStyled = styled.li`
 export const AuthorInfo = styled.div`
   display: flex;
   align-items: center;
-  flex-direction: column;
   margin-right: 20px;
   gap: 10px;
+  @media screen and (min-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 export const Wrapper = styled.div`
   border-radius: 50%;
   width: 100px;
   height: 100px;
+  flex-shrink: 0;
   overflow: hidden;
   border: 2px solid #6643b5;
   background-color: #6643b5;
@@ -46,8 +50,8 @@ export const AuthorAvatar = styled.img`
 
 export const AuthorName = styled.h2`
   font-size: 18px;
-  text-align: center;
-  width: 100px;
+  display: inline-block;
+  margin-bottom: 15px;
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
@@ -59,4 +63,15 @@ export const AuthorReview = styled.p`
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   line-height: 1.4;
+`;
+
+export const StyledChip = styled(Chip)`
+  position: static;
+  text-align: center;
+  color: black;
+  margin-bottom: 5px;
+`;
+export const StyledDate = styled.p`
+  color: white;
+  display: inline;
 `;

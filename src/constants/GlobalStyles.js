@@ -12,7 +12,9 @@ export const GlobalStyles = createGlobalStyle`
     background-size: cover;
   };
 
-
+  p{
+    color: white;
+  }
 
   ul {
     margin: 0;

@@ -21,6 +21,12 @@ export const SybmitButton = styled.button`
   &:focus {
     background-color: #8594e4;
   }
+
+  @media screen and (max-width: 330px) {
+    font-size: 14px;
+    padding: 10px 8px;
+    margin-left: 5px;
+  }
 `;
 
 export const StyledInput = styled.input`
@@ -33,5 +39,9 @@ export const StyledInput = styled.input`
   &:focus {
     outline: none;
     border-color: #430f58;
+  }
+
+  @media screen and (max-width: 330px) {
+    width: 100px;
   }
 `;

@@ -22,8 +22,12 @@ export const StyledTrailer = styled.iframe`
 `;
 
 export const TrailerWrapper = styled.div`
-  padding: 30px;
+  padding: 15px;
   border-radius: 10px;
   background-color: rgba(220, 214, 247, 0.3);
   backdrop-filter: blur(10px);
+
+  @media screen and (min-width: 600px) {
+    padding: 20px;
+  }
 `;
