@@ -5,7 +5,7 @@ import styled from 'styled-components';
 export const StyledHeader = styled.header`
   width: 100%;
   background: linear-gradient(
-    330deg,
+    315deg,
     rgba(0, 0, 0, 1) 0%,
     rgba(102, 67, 181, 1) 90%
   );
