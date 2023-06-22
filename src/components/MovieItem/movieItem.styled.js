@@ -1,3 +1,4 @@
+import { DEFAULT_VALUES } from 'constants/constants';
 import styled from 'styled-components';
 
 export const MovieItemStyled = styled.li`
@@ -28,7 +29,17 @@ export const MovieItemStyled = styled.li`
 export const ImageStyled = styled.img`
   width: 100%;
   display: block;
-  /* height: 224px; */
+
+  @media screen and (min-width: 380px) {
+    /* width: calc((100% - 2 * 20px) / 2); */
+  }
+
+  @media screen and (min-width: 460px) {
+    /* width: calc((100% - 3 * 20px) / 3); */
+  }
+  @media screen and (min-width: 1250px) {
+    height: ${posterHeigth};
+  }
 `;
 
 export const MovieTitle = styled.h2`
@@ -71,5 +82,12 @@ function bcgColor(props) {
     return 'rgba(204,204,0, 0.5)';
   } else {
     return 'rgba(34, 139, 34, 0.5)';
+  }
+}
+function posterHeigth(props) {
+  if (props.src === DEFAULT_VALUES.POSTER) {
+    return '345px';
+  } else {
+    return 'auto';
   }
 }

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import { AditionalInfo, AditionalInfoLink, BackLinkBtn, Description, FlexContainer, MoviePoster, StyledTitle } from "./movie.styled"
 import { Chip } from "components/MovieItem/movieItem.styled"
 import PropTypes from 'prop-types';
+import { DEFAULT_VALUES } from "constants/constants";
 
 
 export const Movie = ({movie, backLink}) => {
@@ -9,7 +10,7 @@ export const Movie = ({movie, backLink}) => {
     <>
       <BackLinkBtn to={backLink.current}>Back</BackLinkBtn>
       <FlexContainer>
-        <MoviePoster src={movie.poster_path ? `https://image.tmdb.org/t/p/original${movie.poster_path}` : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"} alt={movie.title} />
+        <MoviePoster src={movie.poster_path ? `${DEFAULT_VALUES.IMG_PATH}${movie.poster_path}` : DEFAULT_VALUES.POSTER} alt={movie.title} />
         <div>
           <StyledTitle>{movie.title}</StyledTitle>
           <Description>{movie.overview}</Description>

@@ -1,3 +1,4 @@
+import { DEFAULT_VALUES } from 'constants/constants';
 import styled from 'styled-components';
 
 export const CastMemberStyled = styled.li`
@@ -30,6 +31,7 @@ export const CastMemberStyled = styled.li`
 export const ActorPhoto = styled.img`
   width: 100%;
   display: block;
+  margin-top: ${avatarHeigth};
 `;
 
 export const ActorName = styled.h2`
@@ -48,3 +50,11 @@ export const ActorPosition = styled.p`
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
 `;
+
+function avatarHeigth(props) {
+  if (props.src === DEFAULT_VALUES.AVATAR) {
+    return 'auto';
+  } else {
+    return '0';
+  }
+}
