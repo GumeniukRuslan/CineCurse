@@ -1,4 +1,4 @@
-import { Container, NavList, StyledHeader, StyledLink, StyledSVG } from "./header.styled"
+import { Container, LogoText, NavList, StyledHeader, StyledLink, StyledSVG } from "./header.styled"
 
 
 export const Header = () => {
@@ -7,6 +7,7 @@ export const Header = () => {
       <Container>
         <StyledLink to='/'>
           <StyledSVG />
+          <LogoText>CineCurse</LogoText>
         </StyledLink>
         <NavList>
           <li>
