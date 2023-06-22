@@ -44,10 +44,10 @@ export const FlexContainer = styled.div`
 
 export const MoviePoster = styled.img`
   max-width: 70%;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   @media screen and (min-width: 600px) {
     max-width: 260px;
-    margin-bottom: 0;
+    margin-bottom: 5px;
   }
 `;
 
@@ -110,4 +110,11 @@ export const StyledNavLink = styled(NavLink)`
   &.active {
     text-decoration: underline;
   }
+`;
+
+export const ReleaseDate = styled.div`
+  color: white;
+  margin-bottom: 5px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 `;

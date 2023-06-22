@@ -26,6 +26,9 @@ export const AuthorInfo = styled.div`
   align-items: center;
   margin-right: 20px;
   gap: 10px;
+  @media screen and (max-width: 225px) {
+    flex-direction: column;
+  }
   @media screen and (min-width: 600px) {
     flex-direction: column;
   }
@@ -33,12 +36,16 @@ export const AuthorInfo = styled.div`
 
 export const Wrapper = styled.div`
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   flex-shrink: 0;
   overflow: hidden;
   border: 2px solid #6643b5;
   background-color: #6643b5;
+  @media screen and (min-width: 300px) {
+    width: 100px;
+    height: 100px;
+  }
 `;
 
 export const AuthorAvatar = styled.img`

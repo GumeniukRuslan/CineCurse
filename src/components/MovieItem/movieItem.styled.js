@@ -29,14 +29,6 @@ export const MovieItemStyled = styled.li`
 export const ImageStyled = styled.img`
   width: 100%;
   display: block;
-
-  @media screen and (min-width: 380px) {
-    /* width: calc((100% - 2 * 20px) / 2); */
-  }
-
-  @media screen and (min-width: 460px) {
-    /* width: calc((100% - 3 * 20px) / 3); */
-  }
   @media screen and (min-width: 1250px) {
     height: ${posterHeigth};
   }
@@ -66,12 +58,29 @@ export const Chip = styled.p`
   backdrop-filter: blur(10px);
   display: inline-block;
   padding: 6px;
-  font-size: 15px;
+  font-size: 13px;
   border-radius: 40%;
   position: absolute;
   top: 15px;
   right: 15px;
-  color: black;
+  color: #e2e2e2;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    0.5px 0.5px 0 #000;
+`;
+
+export const ComingSoon = styled.p`
+  backdrop-filter: blur(10px);
+  display: inline-block;
+  padding: 6px;
+  font-size: 12px;
+  border-radius: 8px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    0.8px 0.8px 0 #000;
+  letter-spacing: 1.5px;
 `;
 
 function bcgColor(props) {
