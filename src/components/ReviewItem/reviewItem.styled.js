@@ -75,7 +75,7 @@ export const AuthorReview = styled.p`
 export const StyledChip = styled(Chip)`
   position: static;
   text-align: center;
-  color: black;
+  color: white;
   margin-bottom: 5px;
 `;
 export const StyledDate = styled.p`

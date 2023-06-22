@@ -16,7 +16,6 @@ export const CastMemberStyled = styled.li`
   @media screen and (min-width: 380px) {
     width: calc((100% - 2 * 20px) / 2);
   }
-
   @media screen and (min-width: 600px) {
     width: calc((100% - 3 * 20px) / 3);
   }

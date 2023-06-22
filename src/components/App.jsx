@@ -24,7 +24,7 @@ export const App = () => {
           </Route>
         </Route>
       </Routes>
-      <Toaster position="top-right" toastOptions={{duration: 1500, style: {border: '1px solid #713200'}}} />
+      <Toaster position="top-right" toastOptions={{duration: 1500, style: {border: '1px solid #6643b5'}}} />
     </>
       
   );

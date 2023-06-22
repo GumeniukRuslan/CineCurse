@@ -90,7 +90,7 @@ export const AditionalInfo = styled.ul`
   }
 `;
 
-export const AditionalInfoLink = styled.li`
+export const AditionalInfoItem = styled.li`
   border: none;
   border-radius: 4px;
   background-color: #6643b5;

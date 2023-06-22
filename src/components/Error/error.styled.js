@@ -16,11 +16,9 @@ export const StyledError = styled.p`
   @media screen and (min-width: 600px) {
     font-size: 16px;
   }
-
   @media screen and (min-width: 910px) {
     font-size: 18px;
   }
-
   @media screen and (min-width: 1250px) {
     font-size: 22px;
   }

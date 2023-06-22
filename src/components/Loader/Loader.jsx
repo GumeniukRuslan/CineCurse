@@ -5,7 +5,7 @@ export const Loader = () => {
   return (
     <LoaderPosition>
       <Circles
-         width='200'
+        width='200'
         color="#6643b5"
       />
     </LoaderPosition>

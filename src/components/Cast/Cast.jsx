@@ -12,7 +12,7 @@ import { CastList } from "./cast.styled";
 const Cast = () => {
   const [status, setStatus] = useState(STATUS.IDLE);
   const { movieId } = useParams();
-  const [cast, setCast] = useState(null);
+  const [cast, setCast] = useState([]);
 
   useEffect(() => {
     setStatus(STATUS.PENDING)
@@ -31,7 +31,7 @@ const Cast = () => {
     <>
       {status === STATUS.PENDING && <Loader />}
       {status === STATUS.RESOLVED
-        ? (cast.length ? <CastList>{cast && cast.map(member => <CastMember key={member.id} member={member} />)}</CastList> : <Message text="Ninja clan" />)
+        ? (cast.length ? <CastList>{cast.map(member => <CastMember key={member.id} member={member} />)}</CastList> : <Message text="Ninja clan" />)
         : <></>}
       {status === STATUS.REJECTED && <Error/>}
     </>

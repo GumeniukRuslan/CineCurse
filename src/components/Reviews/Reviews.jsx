@@ -12,7 +12,7 @@ import { ReviewsListStyled } from "./review.styled";
 const Reviews = () => {
   const [status, setStatus] = useState(STATUS.IDLE);
   const { movieId } = useParams();
-  const [reviews, setReview] = useState(null);
+  const [reviews, setReview] = useState([]);
 
   useEffect(() => {
     setStatus(STATUS.PENDING)
@@ -31,7 +31,7 @@ const Reviews = () => {
     <>
       {status === STATUS.PENDING && <Loader />}
       {status === STATUS.RESOLVED
-        ? (reviews.length ? <ReviewsListStyled>{reviews && reviews.map(review => <ReviewItem key={review.id} review={review} />)}</ReviewsListStyled> : <Message text="There are no reviews" />)
+        ? (reviews.length ? <ReviewsListStyled>{reviews.map(review => <ReviewItem key={review.id} review={review} />)}</ReviewsListStyled> : <Message text="There are no reviews" />)
         : <></>}
       {status === STATUS.REJECTED && <Error/>}
     </>

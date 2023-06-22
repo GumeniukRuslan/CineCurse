@@ -1,5 +1,5 @@
 
-import { AditionalInfo, AditionalInfoLink, BackLinkBtn, Description, FlexContainer, MoviePoster, PosterWrapper, ReleaseDate, StyledNavLink, StyledTitle } from "./movie.styled"
+import { AditionalInfo, AditionalInfoItem, BackLinkBtn, Description, FlexContainer, MoviePoster, PosterWrapper, ReleaseDate, StyledNavLink, StyledTitle } from "./movie.styled"
 import { Chip, ComingSoon } from "components/MovieItem/movieItem.styled"
 import PropTypes from 'prop-types';
 import { DEFAULT_VALUES } from "constants/constants";
@@ -27,9 +27,9 @@ export const Movie = ({ movie, backLink }) => {
           {movie.vote_count ? <Chip type={ movie.vote_average}>{movie.vote_average.toFixed(1)}</Chip> : released ? <ComingSoon>Coming soon</ComingSoon> : <ComingSoon>Reviews missing</ComingSoon>}
           
           <AditionalInfo>
-            <AditionalInfoLink><StyledNavLink to='cast'>Cast</StyledNavLink></AditionalInfoLink>
-            <AditionalInfoLink><StyledNavLink to='reviews'>Reviews</StyledNavLink></AditionalInfoLink>
-            <AditionalInfoLink><StyledNavLink to='trailer'>Trailer</StyledNavLink></AditionalInfoLink>
+            <AditionalInfoItem><StyledNavLink to='cast'>Cast</StyledNavLink></AditionalInfoItem>
+            <AditionalInfoItem><StyledNavLink to='reviews'>Reviews</StyledNavLink></AditionalInfoItem>
+            <AditionalInfoItem><StyledNavLink to='trailer'>Trailer</StyledNavLink></AditionalInfoItem>
           </AditionalInfo>
         </div>
       </FlexContainer>
