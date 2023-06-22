@@ -5,14 +5,16 @@ import styled from 'styled-components';
 export const StyledHeader = styled.header`
   width: 100%;
   background: linear-gradient(
-    183deg,
+    350deg,
     rgba(0, 0, 0, 1) 0%,
-    rgba(102, 67, 181, 1) 85%
+    rgba(102, 67, 181, 1) 90%
   );
   padding: 8px 0px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 `;
 
 export const Container = styled.div`
