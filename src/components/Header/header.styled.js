@@ -27,7 +27,6 @@ export const Container = styled.div`
 `;
 
 export const StyledSVG = styled(GiFilmSpool)`
-  fill: currentColor;
   fill: black;
   width: 40px;
   height: 40px;
