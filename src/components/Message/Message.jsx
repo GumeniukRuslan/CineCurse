@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
+import { StyledMessage } from "./message.styled"
 
 export const Message = ({ text }) => {
   return (
-    <p>{text}</p>
+    <StyledMessage>{text}</StyledMessage>
   )
 }
 

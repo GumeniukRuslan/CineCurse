@@ -51,3 +51,12 @@ export async function getReviews(id) {
   );
   return response.data;
 }
+export async function getTrailer(id) {
+  const searchParams = new URLSearchParams({
+    api_key: KEY,
+  });
+  const response = await axios.get(
+    `${BASE_URL}/movie/${id}/videos?${searchParams}`
+  );
+  return response.data;
+}

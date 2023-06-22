@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const BackLinkBtn = styled(Link)`
@@ -80,6 +80,7 @@ export const AditionalInfo = styled.ul`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
   gap: 10px;
   font-size: 10px;
 
@@ -92,15 +93,21 @@ export const AditionalInfo = styled.ul`
 export const AditionalInfoLink = styled.li`
   border: none;
   border-radius: 4px;
-  color: rgba(255, 255, 255, 0.908);
   background-color: #6643b5;
   cursor: pointer;
-  font-size: 12px;
-  padding: 2px 10px;
+  padding: 4px 10px;
   transition: background-color 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
 
   &:hover,
   &:focus {
     background-color: #8594e4;
+  }
+`;
+
+export const StyledNavLink = styled(NavLink)`
+  color: white;
+  font-size: 18px;
+  &.active {
+    text-decoration: underline;
   }
 `;

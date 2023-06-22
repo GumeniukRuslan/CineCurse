@@ -1,5 +1,7 @@
+import { StyledError } from "./error.styled"
+
 export const Error = () => {
   return (
-    <div>Error</div>
+    <StyledError>Error</StyledError>
   )
 }
