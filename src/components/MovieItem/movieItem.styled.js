@@ -10,7 +10,8 @@ export const MovieItemStyled = styled.li`
   width: 90%;
   position: relative;
   transition: all 0.2s ease-in-out;
-  &:hover {
+  &:hover,
+  &:focus {
     transform: scale(1.05);
   }
 
