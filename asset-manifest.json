@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CineCurse/static/css/main.3a79e772.css",
-    "main.js": "/CineCurse/static/js/main.85013d07.js",
+    "main.js": "/CineCurse/static/js/main.f0c07429.js",
     "static/js/415.6cebdfd4.chunk.js": "/CineCurse/static/js/415.6cebdfd4.chunk.js",
     "static/js/640.1fd11e9c.chunk.js": "/CineCurse/static/js/640.1fd11e9c.chunk.js",
     "static/js/684.44ffe9ce.chunk.js": "/CineCurse/static/js/684.44ffe9ce.chunk.js",
@@ -11,7 +11,7 @@
     "static/js/279.31e0d11f.chunk.js": "/CineCurse/static/js/279.31e0d11f.chunk.js",
     "index.html": "/CineCurse/index.html",
     "main.3a79e772.css.map": "/CineCurse/static/css/main.3a79e772.css.map",
-    "main.85013d07.js.map": "/CineCurse/static/js/main.85013d07.js.map",
+    "main.f0c07429.js.map": "/CineCurse/static/js/main.f0c07429.js.map",
     "415.6cebdfd4.chunk.js.map": "/CineCurse/static/js/415.6cebdfd4.chunk.js.map",
     "640.1fd11e9c.chunk.js.map": "/CineCurse/static/js/640.1fd11e9c.chunk.js.map",
     "684.44ffe9ce.chunk.js.map": "/CineCurse/static/js/684.44ffe9ce.chunk.js.map",
@@ -22,6 +22,6 @@
   },
   "entrypoints": [
     "static/css/main.3a79e772.css",
-    "static/js/main.85013d07.js"
+    "static/js/main.f0c07429.js"
   ]
 }
