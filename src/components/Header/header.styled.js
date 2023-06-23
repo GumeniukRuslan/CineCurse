@@ -7,7 +7,7 @@ export const StyledHeader = styled.header`
   background: linear-gradient(
     315deg,
     rgba(0, 0, 0, 1) 0%,
-    rgba(102, 67, 181, 1) 90%
+    rgba(102, 67, 181, 1) 70%
   );
   padding: 8px 0px;
   display: flex;

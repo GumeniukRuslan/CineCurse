@@ -22,6 +22,7 @@ export const App = () => {
             <Route path="reviews" element={<Reviews/>}/>
             <Route path="trailer" element={<Trailer/>}/>
           </Route>
+          <Route path="*" element={<Home/>}/>
         </Route>
       </Routes>
       <Toaster position="top-right" toastOptions={{duration: 1500, style: {border: '1px solid #6643b5'}}} />
