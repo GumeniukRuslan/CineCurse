@@ -74,7 +74,9 @@ export const StyledLink = styled(NavLink)`
   &:hover,
   &:focus,
   &:hover svg,
-  &:hover p {
+  &:hover p,
+  &:focus svg,
+  &:focus p {
     fill: #dcb5ff;
     color: #dcb5ff;
   }
