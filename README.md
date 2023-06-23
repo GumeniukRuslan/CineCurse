@@ -5,7 +5,7 @@ applications using React. It allows users to explore trending films of the day,
 search for films based on a query, and view detailed information about each
 film, including the poster, description, reviews, review scores, cast, and
 trailer. Additionally, users can easily share a link with others, which includes
-all the relevant information, such as the search query used, ensuring that
+all the relevant information, such as the used search query, ensuring that
 others can have the same viewing experience.
 
 ## Features
@@ -30,18 +30,6 @@ others can have the same viewing experience.
   between different pages.
 - CSS: Custom CSS styles are used to enhance the visual appeal and user
   experience of the application.
-
-## Getting Started
-
-To run the CineCurse application locally, follow these steps:
-
-1. Clone the repository:
-   `git clone https://github.com/your-username/cinecurse.git`
-2. Navigate to the project directory: `cd cinecurse`
-3. Install the dependencies: `npm install`
-4. Start the development server: `npm start`
-5. Open your browser and visit `http://localhost:3000` to access the CineCurse
-   application.
 
 ## Contributing
 
