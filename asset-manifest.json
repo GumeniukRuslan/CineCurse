@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/CineCurse/static/css/main.3a79e772.css",
-    "main.js": "/CineCurse/static/js/main.0eb25fb0.js",
-    "static/js/415.16f9b532.chunk.js": "/CineCurse/static/js/415.16f9b532.chunk.js",
+    "main.js": "/CineCurse/static/js/main.f9a0ae04.js",
+    "static/js/415.f7a139c9.chunk.js": "/CineCurse/static/js/415.f7a139c9.chunk.js",
     "static/js/640.a2804142.chunk.js": "/CineCurse/static/js/640.a2804142.chunk.js",
-    "static/js/684.cc1b8a99.chunk.js": "/CineCurse/static/js/684.cc1b8a99.chunk.js",
+    "static/js/684.c6edeb43.chunk.js": "/CineCurse/static/js/684.c6edeb43.chunk.js",
     "static/js/289.409d578f.chunk.js": "/CineCurse/static/js/289.409d578f.chunk.js",
     "static/js/169.6e2f8d9b.chunk.js": "/CineCurse/static/js/169.6e2f8d9b.chunk.js",
     "static/js/215.16a1e6d9.chunk.js": "/CineCurse/static/js/215.16a1e6d9.chunk.js",
     "static/js/279.31e0d11f.chunk.js": "/CineCurse/static/js/279.31e0d11f.chunk.js",
     "index.html": "/CineCurse/index.html",
     "main.3a79e772.css.map": "/CineCurse/static/css/main.3a79e772.css.map",
-    "main.0eb25fb0.js.map": "/CineCurse/static/js/main.0eb25fb0.js.map",
-    "415.16f9b532.chunk.js.map": "/CineCurse/static/js/415.16f9b532.chunk.js.map",
+    "main.f9a0ae04.js.map": "/CineCurse/static/js/main.f9a0ae04.js.map",
+    "415.f7a139c9.chunk.js.map": "/CineCurse/static/js/415.f7a139c9.chunk.js.map",
     "640.a2804142.chunk.js.map": "/CineCurse/static/js/640.a2804142.chunk.js.map",
-    "684.cc1b8a99.chunk.js.map": "/CineCurse/static/js/684.cc1b8a99.chunk.js.map",
+    "684.c6edeb43.chunk.js.map": "/CineCurse/static/js/684.c6edeb43.chunk.js.map",
     "289.409d578f.chunk.js.map": "/CineCurse/static/js/289.409d578f.chunk.js.map",
     "169.6e2f8d9b.chunk.js.map": "/CineCurse/static/js/169.6e2f8d9b.chunk.js.map",
     "215.16a1e6d9.chunk.js.map": "/CineCurse/static/js/215.16a1e6d9.chunk.js.map",
@@ -22,6 +22,6 @@
   },
   "entrypoints": [
     "static/css/main.3a79e772.css",
-    "static/js/main.0eb25fb0.js"
+    "static/js/main.f9a0ae04.js"
   ]
 }
