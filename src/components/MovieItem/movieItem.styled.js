@@ -68,7 +68,7 @@ export const Chip = styled.p`
     0.5px 0.5px 0 #000;
 `;
 
-export const ComingSoon = styled.p`
+export const NoReviews = styled.p`
   backdrop-filter: blur(10px);
   display: inline-block;
   padding: 6px;
