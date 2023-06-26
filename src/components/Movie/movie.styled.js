@@ -67,7 +67,17 @@ export const StyledTitle = styled.h1`
 
 export const Description = styled.p`
   color: white;
-  padding-bottom: 15px;
+  margin-bottom: 15px;
+
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  @media screen and (min-width: 600px) {
+    font-size: 18px;
+  }
+`;
+export const Runtime = styled.p`
+  color: white;
+  margin-bottom: 15px;
 
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
