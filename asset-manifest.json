@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/CineCurse/static/css/main.3a79e772.css",
-    "main.js": "/CineCurse/static/js/main.e2a75a07.js",
-    "static/js/415.195bfb7c.chunk.js": "/CineCurse/static/js/415.195bfb7c.chunk.js",
-    "static/js/272.80e8c1d0.chunk.js": "/CineCurse/static/js/272.80e8c1d0.chunk.js",
-    "static/js/684.89822362.chunk.js": "/CineCurse/static/js/684.89822362.chunk.js",
+    "main.js": "/CineCurse/static/js/main.4a3c7ac6.js",
+    "static/js/415.c1203db7.chunk.js": "/CineCurse/static/js/415.c1203db7.chunk.js",
+    "static/js/272.5195ad56.chunk.js": "/CineCurse/static/js/272.5195ad56.chunk.js",
+    "static/js/684.d41e4fbb.chunk.js": "/CineCurse/static/js/684.d41e4fbb.chunk.js",
     "static/js/289.409d578f.chunk.js": "/CineCurse/static/js/289.409d578f.chunk.js",
-    "static/js/169.53e4da7d.chunk.js": "/CineCurse/static/js/169.53e4da7d.chunk.js",
+    "static/js/169.258a22c7.chunk.js": "/CineCurse/static/js/169.258a22c7.chunk.js",
     "static/js/215.16a1e6d9.chunk.js": "/CineCurse/static/js/215.16a1e6d9.chunk.js",
     "static/js/279.31e0d11f.chunk.js": "/CineCurse/static/js/279.31e0d11f.chunk.js",
     "index.html": "/CineCurse/index.html",
     "main.3a79e772.css.map": "/CineCurse/static/css/main.3a79e772.css.map",
-    "main.e2a75a07.js.map": "/CineCurse/static/js/main.e2a75a07.js.map",
-    "415.195bfb7c.chunk.js.map": "/CineCurse/static/js/415.195bfb7c.chunk.js.map",
-    "272.80e8c1d0.chunk.js.map": "/CineCurse/static/js/272.80e8c1d0.chunk.js.map",
-    "684.89822362.chunk.js.map": "/CineCurse/static/js/684.89822362.chunk.js.map",
+    "main.4a3c7ac6.js.map": "/CineCurse/static/js/main.4a3c7ac6.js.map",
+    "415.c1203db7.chunk.js.map": "/CineCurse/static/js/415.c1203db7.chunk.js.map",
+    "272.5195ad56.chunk.js.map": "/CineCurse/static/js/272.5195ad56.chunk.js.map",
+    "684.d41e4fbb.chunk.js.map": "/CineCurse/static/js/684.d41e4fbb.chunk.js.map",
     "289.409d578f.chunk.js.map": "/CineCurse/static/js/289.409d578f.chunk.js.map",
-    "169.53e4da7d.chunk.js.map": "/CineCurse/static/js/169.53e4da7d.chunk.js.map",
+    "169.258a22c7.chunk.js.map": "/CineCurse/static/js/169.258a22c7.chunk.js.map",
     "215.16a1e6d9.chunk.js.map": "/CineCurse/static/js/215.16a1e6d9.chunk.js.map",
     "279.31e0d11f.chunk.js.map": "/CineCurse/static/js/279.31e0d11f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3a79e772.css",
-    "static/js/main.e2a75a07.js"
+    "static/js/main.4a3c7ac6.js"
   ]
 }
