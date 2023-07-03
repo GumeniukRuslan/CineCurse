@@ -1,4 +1,3 @@
-import { DEFAULT_VALUES } from 'constants/constants';
 import styled from 'styled-components';
 
 export const MovieItemStyled = styled.li`
@@ -30,7 +29,7 @@ export const ImageStyled = styled.img`
   width: 100%;
   display: block;
   @media screen and (min-width: 1250px) {
-    height: ${posterHeigth};
+    height: 345px;
   }
 `;
 
@@ -92,12 +91,5 @@ function bcgColor(props) {
     return 'rgba(204,204,0, 0.5)';
   } else {
     return 'rgba(34, 139, 34, 0.5)';
-  }
-}
-function posterHeigth(props) {
-  if (props.src === DEFAULT_VALUES.POSTER) {
-    return '345px';
-  } else {
-    return 'auto';
   }
 }
